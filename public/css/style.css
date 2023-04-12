@@ -76,3 +76,23 @@ footer p {
 .btn-primary {
 	margin-top: 5px;
 }
+.row {
+	margin: 0;
+}
+#tickets-container{
+	padding: 50px;
+}
+#tickets-container h2 {
+	margin-bottom: 30px;
+	color: #212121;
+}
+#tickets-container .card {
+	flex: 1 1 0;
+	max-width: 25%;
+	border-radius: 10px;
+	padding: 0;
+	margin: 5px;
+}
+#botton {
+	background-color: #006599 ;
+}

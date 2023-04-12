@@ -19,7 +19,7 @@
 					<ul>
 						<li><a href="/login">Entrar</li>
 						<li><a href="/cadastrar">Cadastrar</a></li>
-						<li><a href="/inicio">Inicio</a></li>
+						<li><a href="/inicio">Gerenciamento Tickets</a></li>
 						<li><a href="/create">Criar ticket</a></li>
 						<li><a href="/dashboard">Dashboard</a></li>
 						<li><a href="/usuarios">Users</a></li>
