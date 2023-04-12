@@ -2,7 +2,7 @@
 
 @section ('title', 'Tickets')
 
-@section ('content0')
+@section ('content')
 
 
 
