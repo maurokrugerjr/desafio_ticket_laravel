@@ -25,3 +25,7 @@ Route::get('/dashboard', [\App\Http\Controllers\dashboardController::class, 'das
 Route::get('/usuarios', [\App\Http\Controllers\usuariosController::class, 'usuarios']);
 
 Route::get('/create', [\App\Http\Controllers\criarTicketController::class, 'criar']);
+
+Route::post('/create', [\App\Http\Controllers\criarTicketController::class, 'store']);
+
+Route::get('/detalhes/{id}', [\App\Http\Controllers\detalhesController::class, 'detalhes']);
