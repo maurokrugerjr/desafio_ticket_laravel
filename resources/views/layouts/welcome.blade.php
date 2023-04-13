@@ -28,11 +28,18 @@
 			</div>
 		</div>
 	</div>
-	<div class="content">
-		@yield('content')
-	</div>
-	<footer>
-			
+	<main>
+		<div class="content">
+			<div class="row">
+				@if (session('msg'))
+					<p class="msg">{{session('msg')}}</p>
+				@endif
+				@yield('content')
+			</div>
+		</div>
+	</main>
+	<footer id="footer" class="content">
+		
 			<p>Tickets @@</p>
 			
 	</footer>
