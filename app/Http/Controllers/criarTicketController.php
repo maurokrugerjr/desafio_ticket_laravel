@@ -19,6 +19,8 @@ class criarTicketController extends Controller
         $ticket->title = $request->title;
         $ticket->description = $request->description;
         $ticket->prioridade = $request->prioridade;
+        $ticket->itemsRotulo = $request->itemsRotulo;
+        $ticket->itemsCategoria = $request->itemsCategoria;
 
         $ticket->save();
 
