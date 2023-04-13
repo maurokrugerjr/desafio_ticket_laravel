@@ -11,12 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('site_creates', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-            $table->string('title');
-            $table->text('description');
-            $table->string('prioridade', 8, 2);
+        Schema::table('site_creates', function (Blueprint $table) {
+            $table->json('itemsRotulo');
         });
     }
 
@@ -25,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('site_creates');
+        Schema::table('site_creates', function (Blueprint $table) {
+            //
+        });
     }
 };

@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class SiteCreate extends Model
 {
     use HasFactory;
+
+    protected $casts = [
+        'itemsRotulo' => 'array',
+        'itemsCategoria' => 'array'
+    ];
+
 }
