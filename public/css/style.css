@@ -42,6 +42,7 @@ footer {
 	height: 100px;
 	padding-top: 150px;
 	color: #006599;
+	position: fixed;
 }
 footer p {
 	text-align: center;
@@ -51,4 +52,47 @@ footer p {
 	position: absolute;
 	left: 300px;
 	width: calc(100% - 300px);
+}
+.mb-3{
+	width: 50%;
+	margin-left: 25%;
+}
+.editarlogin{
+	margin-top: 50px;
+}
+#botao{
+	margin-top: 10px;
+}
+.form-group {
+	width: 500px;
+	margin-left: 25%;
+
+}
+.container-create {
+	width: 900px;
+	margin-left: 20%;
+	margin-top: 30px;
+}
+.btn-primary {
+	margin-top: 5px;
+}
+.row {
+	margin: 0;
+}
+#tickets-container{
+	padding: 50px;
+}
+#tickets-container h2 {
+	margin-bottom: 30px;
+	color: #212121;
+}
+#tickets-container .card {
+	flex: 1 1 0;
+	max-width: 25%;
+	border-radius: 10px;
+	padding: 0;
+	margin: 5px;
+}
+#botton {
+	background-color: #006599 ;
 }

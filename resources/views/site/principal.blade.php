@@ -2,12 +2,12 @@
 
 @section ('title', 'Tickets')
 
-@section ('content0')
+@section ('content')
 
 
 
 
-
+<p>blablabla</p>
 
 
 

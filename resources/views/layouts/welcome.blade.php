@@ -11,7 +11,7 @@
     <title>@yield('title')</title>
 </head>
 <body>
-    <div class="container">
+	<div class="container">
 		<div id="sidebar">
 			<div class="sidebar-container">
 				<h1>Menu principal</h1>
@@ -19,7 +19,8 @@
 					<ul>
 						<li><a href="/login">Entrar</li>
 						<li><a href="/cadastrar">Cadastrar</a></li>
-						<li><a href="/inicio">Inicio</a></li>
+						<li><a href="/inicio">Gerenciamento Tickets</a></li>
+						<li><a href="/create">Criar ticket</a></li>
 						<li><a href="/dashboard">Dashboard</a></li>
 						<li><a href="/usuarios">Users</a></li>
 					</ul>
@@ -28,12 +29,12 @@
 		</div>
 	</div>
 	<div class="content">
-    	@yield('content')
+		@yield('content')
 	</div>
 	<footer>
-
-	<p>Tickets @@</p>
-
+			
+			<p>Tickets @@</p>
+			
 	</footer>
 </body>
 

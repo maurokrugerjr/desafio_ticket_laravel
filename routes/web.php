@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Middleware\LogAcessoMiddleware;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,12 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/inicio', [\App\Http\Controllers\PrincipalController::class, 'index']);
+Route::get('/inicio', [\App\Http\Controllers\PrincipalController::class, 'index'])
+->name('site.principal');
 
-Route::get('/login', function(){ return 'login';});
+Route::get('/login', [\App\Http\Controllers\loginController::class, 'login']);
 
-Route::get('/cadastrar', function(){ return 'cadastrar';});
+Route::get('/cadastrar', [\App\Http\Controllers\cadastrarController::class, 'cadastrar']);
 
 Route::get('/dashboard', [\App\Http\Controllers\dashboardController::class, 'dashboard']);
 
 Route::get('/usuarios', [\App\Http\Controllers\usuariosController::class, 'usuarios']);
+
+Route::get('/create', [\App\Http\Controllers\criarTicketController::class, 'criar']);
