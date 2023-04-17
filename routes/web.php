@@ -12,6 +12,7 @@ use App\Http\Middleware\LogAcessoMiddleware;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/');
 
 Route::get('/inicio', [\App\Http\Controllers\PrincipalController::class, 'index'])
 ->name('site.principal');
