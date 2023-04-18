@@ -1,7 +1,8 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Middleware\LogAcessoMiddleware;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,7 +22,7 @@ Route::get('/login', [\App\Http\Controllers\loginController::class, 'login']);
 
 Route::get('/cadastrar', [\App\Http\Controllers\cadastrarController::class, 'cadastrar']);
 
-Route::get('/dashboard', [\App\Http\Controllers\dashboardController::class, 'dashboard']);
+Route::get('/tickets', [\App\Http\Controllers\dashboardController::class, 'dashboard']);
 
 Route::get('/usuarios', [\App\Http\Controllers\usuariosController::class, 'usuarios']);
 
@@ -30,3 +31,19 @@ Route::get('/create', [\App\Http\Controllers\criarTicketController::class, 'cria
 Route::post('/create', [\App\Http\Controllers\criarTicketController::class, 'store']);
 
 Route::get('/detalhes/{id}', [\App\Http\Controllers\detalhesController::class, 'detalhes']);
+
+Route::get('/', function () {
+    return view('layouts.welcome');
+});
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+require __DIR__.'/auth.php';

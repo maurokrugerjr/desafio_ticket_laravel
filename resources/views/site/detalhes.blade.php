@@ -1,4 +1,4 @@
-@extends ('layouts.welcome')
+@extends ('layouts.main')
 
 @section ('title', 'Tickets')
 
