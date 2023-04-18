@@ -38,6 +38,16 @@ a {
 	margin-left: auto;
 	width: 200px;
 }
+.sidebar-container input {
+	background-color: #006599;
+	border: 0;
+	color: #FFF;
+	text-decoration: none;
+	font-size: 16px;
+}
+.sidebar-container input:hover {
+	color: #F4EF5E;
+}
 #footer {
 	height: 100px;
 	color: #006599;
