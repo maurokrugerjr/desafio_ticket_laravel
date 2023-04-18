@@ -11,4 +11,9 @@ class PrincipalController extends Controller
         return view('site.principal');
 
     }
+
+    public function visualizar(){
+
+        return view('site.menu-principal');
+    }
 }

@@ -20,16 +20,16 @@
 						@guest
 						<li><a href="/login">Entrar</li>
 						<li><a href="/register">Cadastrar</a></li>
+						<li><a href="/menu-principal">Inicio</a></li>
 						@endguest
+						@auth
+						<li><a href="/tickets">Dashboard</a></li>
 						<li><a href="/inicio">Gerenciamento Tickets</a></li>
 						<li><a href="/create">Criar ticket</a></li>
-						<li><a href="/tickets">Dashboard</a></li>
-						@auth
-						<li><form action="/logout" method="POST">
-						@csrf
-						<a href="/logout"
-						onclick="event.preventDefault();
-						this.closest('form').submit();">Sair</a>
+						<li><form action="{{ route('logout') }}" method="POST">
+							@csrf
+							@method('POST')
+							<input type="submit" value="Sair">
 						</form></li>
 						@endauth
 					</ul>

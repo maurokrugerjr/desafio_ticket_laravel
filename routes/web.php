@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/');
+Route::get('menu-principal', [\App\Http\Controllers\PrincipalController::class, 'visualizar']);
 
 Route::get('/inicio', [\App\Http\Controllers\PrincipalController::class, 'index'])
 ->name('site.principal');
@@ -33,7 +33,7 @@ Route::post('/create', [\App\Http\Controllers\criarTicketController::class, 'sto
 Route::get('/detalhes/{id}', [\App\Http\Controllers\detalhesController::class, 'detalhes']);
 
 Route::get('/', function () {
-    return view('layouts.welcome');
+    return view('site.menu-principal');
 });
 
 Route::get('/dashboard', function () {
