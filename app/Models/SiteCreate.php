@@ -9,6 +9,15 @@ class SiteCreate extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'title',
+        'description',
+        'itemsRotulo',
+        'itemsCategoria',
+        'prioridade',
+    ];
+
+
     protected $casts = [
         'itemsRotulo' => 'array',
         'itemsCategoria' => 'array'

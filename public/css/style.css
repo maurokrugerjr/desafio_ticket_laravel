@@ -134,3 +134,13 @@ a {
 	margin-left: 50px;
 	margin-top: 50px;
 }
+.gerenciamento-title-container {
+	margin-bottom: 30px;
+	margin-top: 30px;
+}
+.gerenciamento-tickets-container th {
+	width: 25%;
+}
+.gerenciamento-tickets-container form {
+	display: inline-block;
+} 

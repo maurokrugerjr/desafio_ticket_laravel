@@ -3,18 +3,20 @@
 @section ('title', 'Tickets')
 
 @section ('content')
+
 <div id="container-create">
-    <h2>Criar tickets :</h2>
+    <h2>Editar ticket {{$ticket->title}} :</h2>
     <form action="" method="POST">
         @csrf
+        @method('PUT')
         <div class="form-group">
             <div class="form-group">
                 <label for="title">Titulo do Ticket:</label>
-                <input type="text" class="form-control" id="title" name="title" placeholder="Nome do ticket">
+                <input type="text" class="form-control" id="title" name="title" placeholder="Nome do ticket" value="{{ $ticket->title }}">
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">Descrição ticket:</label>
-                <textarea name="description" class="form-control" id="description" ></textarea>
+                <textarea name="description" class="form-control" id="description">{{$ticket->description}}</textarea>
             </div>
             <div class="form-group">
                 <label for="title">Rótulos:</label>
@@ -33,10 +35,10 @@
             <div class="form-group">
                 <label for="title">O evento é privado?</label>
                 <select name="prioridade" id="prioridade" class="form-control">
-                    <option value="ALTA">ALTA</option>
-                    <option value="BAIXA">BAIXA</option>
+                    <option value="ALTA" >ALTA</option>
+                    <option value="BAIXA" {{$ticket->prioridade == "BAIXA" ? "selected='selected'" : ""}}>BAIXA</option>
                 </select>
-                <input type="submit" class="btn btn-primary" value="Criar Ticket">
+                <input type="submit" class="btn btn-primary" value="Editar Ticket">
             </div>
         </div>
     </form>

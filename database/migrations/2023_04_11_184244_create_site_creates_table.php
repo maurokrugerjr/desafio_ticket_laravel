@@ -16,7 +16,7 @@ return new class extends Migration
             $table->timestamps();
             $table->string('title');
             $table->text('description');
-            $table->string('prioridade', 8, 2);
+            $table->string('prioridade');
         });
     }
 

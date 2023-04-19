@@ -24,6 +24,6 @@ class criarTicketController extends Controller
 
         $ticket->save();
 
-        return redirect('/dashboard')->with('msg', 'Ticket criado com sucesso!');
+        return redirect('/tickets')->with('msg', 'Ticket criado com sucesso!');
     }
 }

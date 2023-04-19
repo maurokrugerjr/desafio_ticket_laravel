@@ -32,6 +32,12 @@ Route::post('/create', [\App\Http\Controllers\criarTicketController::class, 'sto
 
 Route::get('/detalhes/{id}', [\App\Http\Controllers\detalhesController::class, 'detalhes']);
 
+Route::delete('/create/{id}', [\App\Http\Controllers\PrincipalController::class, 'destroy']);
+
+Route::get('/create/{id}', [\App\Http\Controllers\PrincipalController::class, 'edit']);
+
+Route::put('create/{id}', [\App\Http\Controllers\PrincipalController::class, 'update']);
+
 Route::get('/', function () {
     return view('site.menu-principal');
 });
