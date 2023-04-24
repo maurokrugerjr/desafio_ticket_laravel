@@ -16,27 +16,23 @@ use Illuminate\Support\Facades\Route;
 Route::get('menu-principal', [\App\Http\Controllers\PrincipalController::class, 'visualizar']);
 
 Route::get('/inicio', [\App\Http\Controllers\PrincipalController::class, 'index'])
-->name('site.principal');
-
-Route::get('/login', [\App\Http\Controllers\loginController::class, 'login']);
-
-Route::get('/cadastrar', [\App\Http\Controllers\cadastrarController::class, 'cadastrar']);
+->name('site.principal')->can('admin');
 
 Route::get('/tickets', [\App\Http\Controllers\dashboardController::class, 'dashboard']);
 
 Route::get('/usuarios', [\App\Http\Controllers\usuariosController::class, 'usuarios']);
 
-Route::get('/create', [\App\Http\Controllers\criarTicketController::class, 'criar']);
+Route::get('/create', [\App\Http\Controllers\criarTicketController::class, 'criar'])->can('admin');
 
-Route::post('/create', [\App\Http\Controllers\criarTicketController::class, 'store']);
+Route::post('/create', [\App\Http\Controllers\criarTicketController::class, 'store'])->can('admin');
 
 Route::get('/detalhes/{id}', [\App\Http\Controllers\detalhesController::class, 'detalhes']);
 
-Route::delete('/create/{id}', [\App\Http\Controllers\PrincipalController::class, 'destroy']);
+Route::delete('/create/{id}', [\App\Http\Controllers\PrincipalController::class, 'destroy'])->can('admin');
 
-Route::get('/create/{id}', [\App\Http\Controllers\PrincipalController::class, 'edit']);
+Route::get('/create/{id}', [\App\Http\Controllers\PrincipalController::class, 'edit'])->can('admin', 'agente');
 
-Route::put('create/{id}', [\App\Http\Controllers\PrincipalController::class, 'update']);
+Route::put('create/{id}', [\App\Http\Controllers\PrincipalController::class, 'update'])->can('admin', 'agente');
 
 Route::get('/', function () {
     return view('site.menu-principal');

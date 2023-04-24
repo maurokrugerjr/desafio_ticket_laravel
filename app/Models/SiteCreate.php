@@ -15,6 +15,8 @@ class SiteCreate extends Model
         'itemsRotulo',
         'itemsCategoria',
         'prioridade',
+        'itemsRotulo',
+        'itemsCategoria',
     ];
 
 
